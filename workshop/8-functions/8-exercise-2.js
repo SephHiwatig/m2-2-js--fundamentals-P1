@@ -19,3 +19,7 @@ maxValue(4, 2, 8, 1, 5, 10, 1, 64, 2, 8, -100, 54); // 64
 
 // HINT: You'll want to use "rest parameters".
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters
+
+function maxValue(...numbers) {
+  return Math.max(...numbers);
+}

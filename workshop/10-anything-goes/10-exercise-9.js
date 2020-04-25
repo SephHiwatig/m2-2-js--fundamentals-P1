@@ -13,10 +13,14 @@
 function every(lst, func) {
   // lst is an array and f is a function
   // func takes 1 argument and returns a boolean
+  for (let i = 0; i < lst.length; i++) {
+    if (!func(lst[i])) return false;
+  }
+  return true;
 }
 // -------------------------------------------------------------------------
 function isEven(num) {
   return num % 2 === 0;
 }
-console.log('Q9: ', every([2, 42, 540, 8, 64], isEven));
-console.log('Q9: ', every([2, 42, 540, 3, 64], isEven));
+console.log("Q9: ", every([2, 42, 540, 8, 64], isEven));
+console.log("Q9: ", every([2, 42, 540, 3, 64], isEven));

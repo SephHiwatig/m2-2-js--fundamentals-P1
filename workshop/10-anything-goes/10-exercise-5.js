@@ -14,5 +14,17 @@
 let armstrongNumbers = [];
 
 // write your loop here...
+for (let i = 0; i <= 999; i++) {
+  let stringifiedNumber = i.toString();
+
+  let cubedValue = 0;
+  for (let j = 0; j < stringifiedNumber.length; j++) {
+    cubedValue += stringifiedNumber[j] ** stringifiedNumber.length;
+  }
+
+  if (i === cubedValue) {
+    armstrongNumbers.push(i);
+  }
+}
 
 console.log(armstrongNumbers);

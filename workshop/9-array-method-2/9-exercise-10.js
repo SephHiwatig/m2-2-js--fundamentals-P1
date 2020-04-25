@@ -9,11 +9,16 @@
 // <100 is A
 
 // Write function here
+function calculatePassing(grades) {
+  return grades.map((grade) => {
+    if (grade < 60) return "F";
+    else if (grade < 70) return "D";
+    else if (grade < 80) return "C";
+    else if (grade < 90) return "B";
+    else return "A";
+  });
+}
 
-
- 
 // Call the function with [48, 95, 65, 48, 59, 78, 72, 65]
 
 // Try with other values as well
-
-

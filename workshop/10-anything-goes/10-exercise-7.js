@@ -13,13 +13,19 @@
 
 function map(lst, func) {
   // lst is an array and func is a function
+  let result = [];
+  for (let i = 0; i < lst.length; i++) {
+    let elementCharCount = func(lst[i]);
+    result.push(elementCharCount);
+  }
+  return result;
 }
 // -------------------------------------------------------------------------
 function charCount(str) {
   return str.length;
 }
 console.log(
-  'Q7: ',
-  map(['Cyborg', 'Robin', 'Batman', 'Superman', 'Aquaman', 'Flash'], charCount)
+  "Q7: ",
+  map(["Cyborg", "Robin", "Batman", "Superman", "Aquaman", "Flash"], charCount)
 );
-console.log('Q7: ', map(['Scott', 'Bob', 'Ric', 'Jim'], charCount));
+console.log("Q7: ", map(["Scott", "Bob", "Ric", "Jim"], charCount));

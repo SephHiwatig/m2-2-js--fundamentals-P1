@@ -16,6 +16,40 @@
 // See this site for a list of "narcissistic" numbers
 // http://mathworld.wolfram.com/NarcissisticNumber.html
 
-function identifyArmstrongNumbers(num1, num2) {}
+let narcissisticNumbers = [];
+
+// write your loop here...
+for (let i = 0; i <= 999; i++) {
+  let stringifiedNumber = i.toString();
+
+  let cubedValue = 0;
+  for (let j = 0; j < stringifiedNumber.length; j++) {
+    cubedValue += stringifiedNumber[j] ** 3;
+  }
+
+  if (i === cubedValue) {
+    armstrongNumbers.push(i);
+  }
+}
+
+function identifyArmstrongNumbers(num1, num2) {
+  let narcissisticNumbers = [];
+
+  // write your loop here...
+  for (let i = num1; i <= num2; i++) {
+    let stringifiedNumber = i.toString();
+
+    let cubedValue = 0;
+    for (let j = 0; j < stringifiedNumber.length; j++) {
+      cubedValue += stringifiedNumber[j] ** stringifiedNumber.length;
+    }
+
+    if (i === cubedValue) {
+      narcissisticNumbers.push(i);
+    }
+  }
+
+  return narcissisticNumbers;
+}
 
 console.log(identifyArmstrongNumbers(100, 99999));
